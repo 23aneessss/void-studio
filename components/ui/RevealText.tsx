@@ -52,7 +52,7 @@ export default function RevealText({
       gsap.registerPlugin(ScrollTrigger);
 
       split_ = new SplitType(ref.current, {
-        types: split === 'chars' ? 'lines, words, chars' : 'lines, words',
+        types: split === 'chars' ? 'lines,words,chars' : 'lines,words',
         tagName: 'span',
       });
 

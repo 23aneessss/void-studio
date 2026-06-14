@@ -47,11 +47,13 @@ export const metadata: Metadata = {
       'A dark luxury creative agency. Branding · Motion · Digital · 3D · AI.',
     type: 'website',
     locale: 'en_US',
+    images: [{ url: '/img/og.webp', width: 1376, height: 768, alt: 'VOID Studio' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VOID Studio — We Craft The Impossible',
     description: 'A dark luxury creative agency. Branding · Motion · Digital · 3D · AI.',
+    images: ['/img/og.webp'],
   },
 };
 
