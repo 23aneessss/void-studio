@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --void: #080808;
+  --gold: #c9a84c;
+  --bone: #f5f5f0;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: var(--void);
+  color: var(--bone);
+  /* Lenis drives scroll; keep native smooth off to avoid double easing */
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--void);
+  color: var(--bone);
+  overflow-x: hidden;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Hide the native cursor on devices that have the custom one (pointer:fine) */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--gold);
+  color: #080808;
+}
+
+/* Minimal dark scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Utility: characters/lines split by SplitType start hidden for reveal */
+.reveal-line {
+  overflow: hidden;
+}
+
+.reveal-char,
+.reveal-word {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Clip-path reveal start state (GSAP animates to full) */
+.clip-reveal {
+  clip-path: inset(0 0 100% 0);
+}
+
+/* Pinned horizontal services track */
+.services-track {
+  will-change: transform;
+}
+
+/* Reduced motion: disable heavy animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin uppercase label */
+.eyebrow {
+  font-family: var(--font-sans), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
