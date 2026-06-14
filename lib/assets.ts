@@ -25,8 +25,16 @@ export const HIGGSFIELD = {
   },
   about: {
     local: '/videos/about.mp4',
-    remote: '', // filled after the about job completes
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3DVTv79fvzJzhtH5bOqJucO6xcj/hf_20260614_142617_1ce70d39-3e3d-4238-9c78-5006cef067f3.mp4',
     jobId: '1ce70d39-3e3d-4238-9c78-5006cef067f3',
     model: 'veo3_1_lite',
+  },
+  poster: {
+    local: '/img/poster.png',
+    remote:
+      'https://d8j0ntlcm91z4.cloudfront.net/user_3DVTv79fvzJzhtH5bOqJucO6xcj/hf_20260614_142954_7ee5e2e2-55e8-4e06-9919-fe0e44a1807c.png',
+    jobId: '7ee5e2e2-55e8-4e06-9919-fe0e44a1807c',
+    model: 'nano_banana_pro',
   },
 } as const;
