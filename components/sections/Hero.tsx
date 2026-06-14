@@ -100,7 +100,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/img/poster.jpg"
+          poster={HIGGSFIELD.poster.local}
         >
           <source src={HIGGSFIELD.hero.local} type="video/mp4" />
         </video>
