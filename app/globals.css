@@ -106,6 +106,15 @@ body {
   font-weight: 500;
 }
 
+@keyframes scrollLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(220%);
+  }
+}
+
 /* Custom cursor ring active state (over interactive elements) */
 .cursor-ring.is-active {
   border-color: var(--gold);
