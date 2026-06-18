@@ -33,6 +33,8 @@ All hero/ambient visuals are AI-generated via the **Higgsfield** pipeline.
 
 ---
 
+
+
 ## Generated assets (Higgsfield)
 
 Generated within a 10-credit free-plan budget and committed to `/public` so the site is fully self-hosted (the source CloudFront URLs are recorded in [`lib/assets.ts`](lib/assets.ts) for provenance).
@@ -43,12 +45,17 @@ Generated within a 10-credit free-plan budget and committed to `/public` so the 
 | `public/videos/about.mp4` | `veo3_1_lite` | abstract dark fluid motion, ink in water, b&w |
 | `public/img/poster.png` + `og.webp` | `nano_banana_pro` | dark luxury abstract poster, gold liquid metal |
 
+
 The three Work-card previews reuse the two master clips with distinct CSS color grades
 (see `grade` in [`lib/data.ts`](lib/data.ts)). To use dedicated clips, top up Higgsfield
 credits, generate three more videos, drop them in `public/videos`, and repoint the `video`
 fields.
 
+
+
 ---
+
+
 
 ## Fonts
 
@@ -56,14 +63,19 @@ The brand fonts are **Editorial New** (serif) + **Neue Montreal** (sans), which 
 (PangramPangram). For an out-of-the-box deploy they are substituted with closely matched open
 fonts via `next/font`:
 
+
+
 - `Fraunces` → Editorial New
 - `Space Grotesk` → Neue Montreal
+
 
 To use the real fonts, drop the `.woff2` files in `public/fonts` and swap the `next/font/google`
 calls in `app/layout.tsx` for `next/font/local` — the CSS variables (`--font-serif` /
 `--font-sans`) stay the same.
 
+
 ---
+
 
 ## Develop
 
