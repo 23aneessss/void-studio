@@ -4,7 +4,11 @@ A dark luxury creative-agency website — built with **Next.js (App Router)**, *
 
 All hero/ambient visuals are AI-generated via the **Higgsfield** pipeline.
 
+
+
 ---
+
+
 
 ## Stack & techniques
 
